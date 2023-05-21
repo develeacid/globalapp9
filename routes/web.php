@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Livewire\Inicio;
+use App\Http\Livewire\Objetivo;
+use App\Http\Livewire\Productos;
+use App\Http\Livewire\Contacto;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +32,21 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+/* Rutas generadas por live wire */
+//ruta de inicio
+Route::get('/inicio', function () {
+    return view('/livewire/inicio');
+});
+//ruta de objetivo
+Route::get('/objetivo', function () {
+    return view('/livewire/objetivo');
+});
+//ruta de productos
+Route::get('/productos', function () {
+    return view('/livewire/productos');
+});
+//ruta de contacto
+Route::get('/contacto', function () {
+    return view('/livewire/contacto');
 });
